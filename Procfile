@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/tareas -Dhttp.port=${PORT} -Dconfig.resource=application.conf -DapplyEvolutions.default=true -Ddb.default.driver=org.postgresql.Driver -Ddb.default.url=${DATABASE_URL}
+web: target/universal/stage/bin/tareas -Dhttp.port=${PORT} ${JAVA_OPTS} -Dconfig.resource=application.conf -DapplyEvolutions.default=true -Ddb.default.driver=org.postgresql.Driver -Ddb.default.url=${DATABASE_URL}
