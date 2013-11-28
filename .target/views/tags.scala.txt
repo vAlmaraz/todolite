@@ -1,4 +1,4 @@
-@(tags:List[String])
+@(tags:List[Tag])
 [
 	@for(i <- tags.indices) {
 		@_tag(tags(i))

@@ -1,4 +1,4 @@
-@(usuarios:List[String])
+@(usuarios:List[Usuario])
 [
 	@for(i <- usuarios.indices) {
 		@_usuario(usuarios(i))

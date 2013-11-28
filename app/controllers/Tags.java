@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import models.Tag;
@@ -15,18 +14,16 @@ public class Tags extends Controller {
 
 	/**
 	 * Tags paginados
-	 * 
-	 * @param pagina
-	 *            : número de la página a mostrar
+	 * @param pagina: número de la página a mostrar
 	 * @return: lista de tags en formato JSON
 	 */
-	public static Result index(Long id, Integer pagina) {
+	public static Result index(Integer pagina) {
 		List<Tag> lista = Tag.getAll(pagina);
-		List<String> tags = new ArrayList<String>();
+		//List<String> tags = new ArrayList<String>();
 		if (lista.size() > 0) {
-			for (int i = 0; i < lista.size(); i++)
-				tags.add(lista.get(i).tag);
-			return Funciones.okJson(views.txt.tags.render(tags));
+			//for (int i = 0; i < lista.size(); i++)
+				//tags.add(lista.get(i).tag);
+			return Funciones.okJson(views.txt.tags.render(lista));
 		} else
 			return Funciones.errorNotFound(0, "No hay tags en esa página");
 	}
@@ -42,7 +39,7 @@ public class Tags extends Controller {
 			if (datos.hasNonNull("tag")) {
 				Tag tag = new Tag(datos);
 				tag.save();
-				return Funciones.okJson(views.txt._tag.render(tag.tag));
+				return Funciones.okJson(views.txt._tag.render(tag));
 			} else
 				return Funciones.errorInputData();
 		} else
@@ -59,7 +56,7 @@ public class Tags extends Controller {
 	public static Result retrieve(Long id) {
 		Tag tag = Tag.findById(id);
 		if (tag != null) {
-			return Funciones.okJson(views.txt._tag.render(tag.tag));
+			return Funciones.okJson(views.txt._tag.render(tag));
 		} else
 			return Funciones.errorNotFound(0, "Tag no encontrado");
 	}
@@ -79,7 +76,7 @@ public class Tags extends Controller {
 				if (tag != null) {
 					tag.changeData(new Tag(datos));
 					tag.update();
-					return Funciones.okJson(views.txt._tag.render(tag.tag));
+					return Funciones.okJson(views.txt._tag.render(tag));
 				} else
 					return Funciones.errorNotFound(0, "Tag no encontrado");
 			} else

@@ -1,7 +1,6 @@
 package controllers;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import models.Tarea;
@@ -26,15 +25,14 @@ public class Tareas extends Controller {
 	public static Result index(Long id, Integer pagina) {
 		if (Usuario.findById(id) != null) {
 			List<Tarea> lista = Tarea.getAll(id, pagina);
-			List<String> descripciones = new ArrayList<String>();
-			List<Boolean> realizadas = new ArrayList<Boolean>();
+			//List<String> descripciones = new ArrayList<String>();
+			//List<Boolean> realizadas = new ArrayList<Boolean>();
 			if (lista.size() > 0) {
-				for (int i = 0; i < lista.size(); i++) {
-					descripciones.add(lista.get(i).descripcion);
-					realizadas.add(lista.get(i).realizada);
-				}
-				return Funciones.okJson(views.txt.tareas.render(descripciones,
-						realizadas));
+				//for (int i = 0; i < lista.size(); i++) {
+					//descripciones.add(lista.get(i).descripcion);
+					//realizadas.add(lista.get(i).realizada);
+				//}
+				return Funciones.okJson(views.txt.tareas.render(lista));
 			} else
 				return Funciones.errorNotFound(0,
 						"No hay tareas en esa página");
@@ -50,15 +48,14 @@ public class Tareas extends Controller {
 	 */
 	public static Result tareasByTagName(Long id, String tag) {
 		List<Tarea> lista = Tarea.findByTagName(id,tag);
-		List<String> descripciones = new ArrayList<String>();
-		List<Boolean> realizadas = new ArrayList<Boolean>();
+		//List<String> descripciones = new ArrayList<String>();
+		//List<Boolean> realizadas = new ArrayList<Boolean>();
 		if (lista != null && lista.size() > 0) {
-			for (int i = 0; i < lista.size(); i++) {
-				descripciones.add(lista.get(i).descripcion);
-				realizadas.add(lista.get(i).realizada);
-			}
-			return Funciones.okJson(views.txt.tareas.render(descripciones,
-					realizadas));
+			//for (int i = 0; i < lista.size(); i++) {
+				//descripciones.add(lista.get(i).descripcion);
+				//realizadas.add(lista.get(i).realizada);
+			//}
+			return Funciones.okJson(views.txt.tareas.render(lista));
 		} else
 			return Funciones.errorNotFound(0, "No hay tareas");
 	}
@@ -76,7 +73,7 @@ public class Tareas extends Controller {
 				if (nuevaTarea.autor != null) {
 					nuevaTarea.save();
 					return Funciones.okJson(views.txt._tarea.render(
-							nuevaTarea.descripcion, nuevaTarea.realizada));
+							nuevaTarea));
 				} else
 					return Funciones.errorNotFound(0, "Usuario no encontrado");
 			} else
@@ -96,7 +93,7 @@ public class Tareas extends Controller {
 			Tarea mTarea = Tarea.findById(id, tarea);
 			if (mTarea != null)
 				return Funciones.okJson(views.txt._tarea.render(
-						mTarea.descripcion, mTarea.realizada));
+						mTarea));
 			else
 				return Funciones.errorNotFound(0, "Tarea no encontrada");
 		} else
@@ -118,7 +115,7 @@ public class Tareas extends Controller {
 					mTarea.changeData(new Tarea(id, datos));
 					mTarea.update();
 					return Funciones.okJson(views.txt._tarea.render(
-							mTarea.descripcion, mTarea.realizada));
+							mTarea));
 				} else
 					return Funciones.errorNotFound(0, "Tarea no encontrada");
 			} else
@@ -159,7 +156,7 @@ public class Tareas extends Controller {
 			mTarea.realizada = true;
 			mTarea.update();
 			return Funciones.okJson(views.txt._tarea.render(
-					mTarea.descripcion, mTarea.realizada));
+					mTarea));
 		} else
 			return Funciones.errorNotFound(0, "Tarea no encontrada");
 	}

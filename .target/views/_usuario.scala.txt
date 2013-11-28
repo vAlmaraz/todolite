@@ -1,6 +1,7 @@
-@(nombre: String)
+@(user: Usuario)
 {
-	@if(nombre != null) {
-		"nombre": "@nombre"
+	@if(user != null) {
+		"id":"@user.id",
+		"nombre": "@user.nombre"
 	}
 }

@@ -1,6 +1,7 @@
-@(tag: String)
+@(tag: Tag)
 {
 	@if(tag != null) {
-		"tag": "@tag"
+		"id": "@tag.id",
+		"tag": "@tag.tag"
 	}
 }

@@ -27,6 +27,8 @@ GET		/tag/$id<[0-9]*>												controllers.Tags.retrieve(id:Long)
 PUT		/tag/$id<[0-9]*>												controllers.Tags.update(id:Long)
 DELETE	/tag/$id<[0-9]*>												controllers.Tags.delete(id:Long)
 
+GET		/tags/$pagina<[0-9]*>											controllers.Tags.index(pagina:Integer)
+
 POST	/usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags					controllers.Tareas.addTags(id:Long,tarea:Long)
 GET		/usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags/$pagina<[0-9]*>	controllers.Tareas.getTags(id:Long,tarea:Long,pagina:Integer)
 

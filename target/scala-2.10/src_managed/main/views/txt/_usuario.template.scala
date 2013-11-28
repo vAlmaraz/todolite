@@ -20,34 +20,35 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import views.txt._
 /**/
-object _usuario extends BaseScalaTemplate[play.api.templates.TxtFormat.Appendable,Format[play.api.templates.TxtFormat.Appendable]](play.api.templates.TxtFormat) with play.api.templates.Template1[String,play.api.templates.TxtFormat.Appendable] {
+object _usuario extends BaseScalaTemplate[play.api.templates.TxtFormat.Appendable,Format[play.api.templates.TxtFormat.Appendable]](play.api.templates.TxtFormat) with play.api.templates.Template1[Usuario,play.api.templates.TxtFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(nombre: String):play.api.templates.TxtFormat.Appendable = {
+    def apply/*1.2*/(user: Usuario):play.api.templates.TxtFormat.Appendable = {
         _display_ {
 
-Seq[Any](format.raw/*1.18*/("""
+Seq[Any](format.raw/*1.17*/("""
 """),format.raw/*2.1*/("""{"""),format.raw/*2.2*/("""
-	"""),_display_(Seq[Any](/*3.3*/if(nombre != null)/*3.21*/ {_display_(Seq[Any](format.raw/*3.23*/("""
-		"nombre": """"),_display_(Seq[Any](/*4.15*/nombre)),format.raw/*4.21*/(""""
-	""")))})),format.raw/*5.3*/("""
-"""),format.raw/*6.1*/("""}"""))}
+	"""),_display_(Seq[Any](/*3.3*/if(user != null)/*3.19*/ {_display_(Seq[Any](format.raw/*3.21*/("""
+		"id":""""),_display_(Seq[Any](/*4.10*/user/*4.14*/.id)),format.raw/*4.17*/("""",
+		"nombre": """"),_display_(Seq[Any](/*5.15*/user/*5.19*/.nombre)),format.raw/*5.26*/(""""
+	""")))})),format.raw/*6.3*/("""
+"""),format.raw/*7.1*/("""}"""))}
     }
     
-    def render(nombre:String): play.api.templates.TxtFormat.Appendable = apply(nombre)
+    def render(user:Usuario): play.api.templates.TxtFormat.Appendable = apply(user)
     
-    def f:((String) => play.api.templates.TxtFormat.Appendable) = (nombre) => apply(nombre)
+    def f:((Usuario) => play.api.templates.TxtFormat.Appendable) = (user) => apply(user)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Sat Nov 23 21:02:36 CET 2013
+                    DATE: Thu Nov 28 20:27:42 CET 2013
                     SOURCE: C:/play/workspace/tareas/app/views/_usuario.scala.txt
-                    HASH: 9a97e5d3e5843e34b8c917d9c837bf69dca6ddff
-                    MATRIX: 771->1|880->17|908->19|935->20|973->24|999->42|1038->44|1089->60|1116->66|1151->71|1179->73
-                    LINES: 26->1|29->1|30->2|30->2|31->3|31->3|31->3|32->4|32->4|33->5|34->6
+                    HASH: 3a03916e36dd421d658be5dc1ec7945cf81c79ee
+                    MATRIX: 772->1|880->16|908->18|935->19|973->23|997->39|1036->41|1082->52|1094->56|1118->59|1171->77|1183->81|1211->88|1246->93|1274->95
+                    LINES: 26->1|29->1|30->2|30->2|31->3|31->3|31->3|32->4|32->4|32->4|33->5|33->5|33->5|34->6|35->7
                     -- GENERATED --
                 */
             

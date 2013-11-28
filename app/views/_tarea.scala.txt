@@ -1,9 +1,8 @@
-@(tarea: String,realizada: Boolean)
+@(tarea: Tarea)
 {
 	@if(tarea != null) {
-		"descripcion": "@tarea"
-		@if(realizada != null) {
-			,"realizada": @realizada
-		}
+		"id":"@tarea.id",
+		"descripcion": "@tarea.descripcion",
+		"realizada":"@tarea.realizada"
 	}
 }

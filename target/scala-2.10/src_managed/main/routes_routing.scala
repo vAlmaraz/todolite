@@ -1,6 +1,6 @@
 // @SOURCE:C:/play/workspace/tareas/conf/routes
-// @HASH:3da9b12f4596880f16e81bf70fe93690d4da6b48
-// @DATE:Wed Nov 27 19:05:42 CET 2013
+// @HASH:ddf4ae1db5dfad2ad0d1e15a71d5eb2fe8676c12
+// @DATE:Thu Nov 28 20:38:52 CET 2013
 
 
 import play.core._
@@ -101,21 +101,25 @@ private[this] lazy val controllers_Tags_delete17 = Route("DELETE", PathPattern(L
         
 
 // @LINE:30
-private[this] lazy val controllers_Tareas_addTags18 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("usuario/"),DynamicPart("id", """[0-9]*""",false),StaticPart("/tarea/"),DynamicPart("tarea", """[0-9]*""",false),StaticPart("/tags"))))
+private[this] lazy val controllers_Tags_index18 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("tags/"),DynamicPart("pagina", """[0-9]*""",false))))
         
 
-// @LINE:31
-private[this] lazy val controllers_Tareas_getTags19 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("usuario/"),DynamicPart("id", """[0-9]*""",false),StaticPart("/tarea/"),DynamicPart("tarea", """[0-9]*""",false),StaticPart("/tags/"),DynamicPart("pagina", """[0-9]*""",false))))
+// @LINE:32
+private[this] lazy val controllers_Tareas_addTags19 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("usuario/"),DynamicPart("id", """[0-9]*""",false),StaticPart("/tarea/"),DynamicPart("tarea", """[0-9]*""",false),StaticPart("/tags"))))
         
 
 // @LINE:33
-private[this] lazy val controllers_Tareas_tareasByTagName20 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("usuario/"),DynamicPart("id", """[0-9]*""",false),StaticPart("/tag/"),DynamicPart("tag", """[a-z,0-9]*""",false))))
+private[this] lazy val controllers_Tareas_getTags20 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("usuario/"),DynamicPart("id", """[0-9]*""",false),StaticPart("/tarea/"),DynamicPart("tarea", """[0-9]*""",false),StaticPart("/tags/"),DynamicPart("pagina", """[0-9]*""",false))))
         
 
-// @LINE:37
-private[this] lazy val controllers_Assets_at21 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+// @LINE:35
+private[this] lazy val controllers_Tareas_tareasByTagName21 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("usuario/"),DynamicPart("id", """[0-9]*""",false),StaticPart("/tag/"),DynamicPart("tag", """[a-z,0-9]*""",false))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario""","""controllers.Usuarios.create()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>""","""controllers.Usuarios.retrieve(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$nombre<[a-z,0-9]*>""","""controllers.Usuarios.retrieveByName(nombre:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$nombre<[a-z,0-9]*>/$pagina<[0-9]*>""","""controllers.Usuarios.retrieveNames(nombre:String, pagina:Integer)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>""","""controllers.Usuarios.update(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>""","""controllers.Usuarios.delete(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios/$pagina<[0-9]*>""","""controllers.Usuarios.index(pagina:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea""","""controllers.Tareas.create(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>""","""controllers.Tareas.retrieve(id:Long, tarea:Long)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>""","""controllers.Tareas.update(id:Long, tarea:Long)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/realizada""","""controllers.Tareas.done(id:Long, tarea:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>""","""controllers.Tareas.delete(id:Long, tarea:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tareas/$pagina<[0-9]*>""","""controllers.Tareas.index(id:Long, pagina:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tag""","""controllers.Tags.create()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tag/$id<[0-9]*>""","""controllers.Tags.retrieve(id:Long)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tag/$id<[0-9]*>""","""controllers.Tags.update(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tag/$id<[0-9]*>""","""controllers.Tags.delete(id:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags""","""controllers.Tareas.addTags(id:Long, tarea:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags/$pagina<[0-9]*>""","""controllers.Tareas.getTags(id:Long, tarea:Long, pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tag/$tag<[a-z,0-9]*>""","""controllers.Tareas.tareasByTagName(id:Long, tag:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:39
+private[this] lazy val controllers_Assets_at22 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario""","""controllers.Usuarios.create()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>""","""controllers.Usuarios.retrieve(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$nombre<[a-z,0-9]*>""","""controllers.Usuarios.retrieveByName(nombre:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$nombre<[a-z,0-9]*>/$pagina<[0-9]*>""","""controllers.Usuarios.retrieveNames(nombre:String, pagina:Integer)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>""","""controllers.Usuarios.update(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>""","""controllers.Usuarios.delete(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios/$pagina<[0-9]*>""","""controllers.Usuarios.index(pagina:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea""","""controllers.Tareas.create(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>""","""controllers.Tareas.retrieve(id:Long, tarea:Long)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>""","""controllers.Tareas.update(id:Long, tarea:Long)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/realizada""","""controllers.Tareas.done(id:Long, tarea:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>""","""controllers.Tareas.delete(id:Long, tarea:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tareas/$pagina<[0-9]*>""","""controllers.Tareas.index(id:Long, pagina:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tag""","""controllers.Tags.create()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tag/$id<[0-9]*>""","""controllers.Tags.retrieve(id:Long)"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tag/$id<[0-9]*>""","""controllers.Tags.update(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tag/$id<[0-9]*>""","""controllers.Tags.delete(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tags/$pagina<[0-9]*>""","""controllers.Tags.index(pagina:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags""","""controllers.Tareas.addTags(id:Long, tarea:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags/$pagina<[0-9]*>""","""controllers.Tareas.getTags(id:Long, tarea:Long, pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuario/$id<[0-9]*>/tag/$tag<[a-z,0-9]*>""","""controllers.Tareas.tareasByTagName(id:Long, tag:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -268,31 +272,39 @@ case controllers_Tags_delete17(params) => {
         
 
 // @LINE:30
-case controllers_Tareas_addTags18(params) => {
+case controllers_Tags_index18(params) => {
+   call(params.fromPath[Integer]("pagina", None)) { (pagina) =>
+        invokeHandler(controllers.Tags.index(pagina), HandlerDef(this, "controllers.Tags", "index", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """tags/$pagina<[0-9]*>"""))
+   }
+}
+        
+
+// @LINE:32
+case controllers_Tareas_addTags19(params) => {
    call(params.fromPath[Long]("id", None), params.fromPath[Long]("tarea", None)) { (id, tarea) =>
         invokeHandler(controllers.Tareas.addTags(id, tarea), HandlerDef(this, "controllers.Tareas", "addTags", Seq(classOf[Long], classOf[Long]),"POST", """""", Routes.prefix + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags"""))
    }
 }
         
 
-// @LINE:31
-case controllers_Tareas_getTags19(params) => {
+// @LINE:33
+case controllers_Tareas_getTags20(params) => {
    call(params.fromPath[Long]("id", None), params.fromPath[Long]("tarea", None), params.fromPath[Integer]("pagina", None)) { (id, tarea, pagina) =>
         invokeHandler(controllers.Tareas.getTags(id, tarea, pagina), HandlerDef(this, "controllers.Tareas", "getTags", Seq(classOf[Long], classOf[Long], classOf[Integer]),"GET", """""", Routes.prefix + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags/$pagina<[0-9]*>"""))
    }
 }
         
 
-// @LINE:33
-case controllers_Tareas_tareasByTagName20(params) => {
+// @LINE:35
+case controllers_Tareas_tareasByTagName21(params) => {
    call(params.fromPath[Long]("id", None), params.fromPath[String]("tag", None)) { (id, tag) =>
         invokeHandler(controllers.Tareas.tareasByTagName(id, tag), HandlerDef(this, "controllers.Tareas", "tareasByTagName", Seq(classOf[Long], classOf[String]),"GET", """""", Routes.prefix + """usuario/$id<[0-9]*>/tag/$tag<[a-z,0-9]*>"""))
    }
 }
         
 
-// @LINE:37
-case controllers_Assets_at21(params) => {
+// @LINE:39
+case controllers_Assets_at22(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
    }

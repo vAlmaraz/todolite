@@ -1,6 +1,5 @@
 package controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import models.Usuario;
@@ -20,11 +19,11 @@ public class Usuarios extends Controller {
 	 */
 	public static Result index(Integer pagina) {
 		List<Usuario> lista = Usuario.getAll(pagina);
-		List<String> usuarios = new ArrayList<String>();
+		//List<String> usuarios = new ArrayList<String>();
 		if (lista.size() > 0) {
-			for (int i = 0; i < lista.size(); i++)
-				usuarios.add(lista.get(i).nombre);
-			return Funciones.okJson(views.txt.usuarios.render(usuarios));
+			//for (int i = 0; i < lista.size(); i++)
+				//usuarios.add(lista.get(i).nombre);
+			return Funciones.okJson(views.txt.usuarios.render(lista));
 		} else
 			return Funciones.errorNotFound(0, "No hay usuarios en esa página");
 	}
@@ -40,7 +39,7 @@ public class Usuarios extends Controller {
 				Usuario nuevoUsuario = new Usuario(datos);
 				nuevoUsuario.save();
 				return Funciones.okJson(views.txt._usuario
-						.render(nuevoUsuario.nombre));
+						.render(nuevoUsuario));
 			} else
 				return Funciones.errorInputData();
 		} else
@@ -55,7 +54,7 @@ public class Usuarios extends Controller {
 	public static Result retrieve(Long id) {
 		Usuario usuario = Usuario.findById(id);
 		if (usuario != null) {
-			return Funciones.okJson(views.txt._usuario.render(usuario.nombre));
+			return Funciones.okJson(views.txt._usuario.render(usuario));
 		} else
 			return Funciones.errorNotFound(0, "Usuario no encontrado");
 	}
@@ -68,7 +67,7 @@ public class Usuarios extends Controller {
 	public static Result retrieveByName(String nombre) {
 		Usuario usuario = Usuario.findName(nombre);
 		if (usuario != null) {
-			return Funciones.okJson(views.txt._usuario.render(usuario.nombre));
+			return Funciones.okJson(views.txt._usuario.render(usuario));
 		} else
 			return Funciones.errorNotFound(0, "Usuario no encontrado");
 	}
@@ -81,11 +80,11 @@ public class Usuarios extends Controller {
 	 */
 	public static Result retrieveNames(String nombre, Integer pagina) {
 		List<Usuario> lista = Usuario.findNames(nombre, pagina);
-		List<String> usuarios = new ArrayList<String>();
+		//List<String> usuarios = new ArrayList<String>();
 		if (lista.size() > 0) {
-			for (int i = 0; i < lista.size(); i++)
-				usuarios.add(lista.get(i).nombre);
-			return Funciones.okJson(views.txt.usuarios.render(usuarios));
+			//for (int i = 0; i < lista.size(); i++)
+				//usuarios.add(lista.get(i).nombre);
+			return Funciones.okJson(views.txt.usuarios.render(lista));
 		} else
 			return Funciones.errorNotFound(0, "No se han encontrado usuarios");
 	}
@@ -103,7 +102,7 @@ public class Usuarios extends Controller {
 				usuario.changeData(new Usuario(datos));
 				usuario.update();
 				return Funciones.okJson(views.txt._usuario
-						.render(usuario.nombre));
+						.render(usuario));
 			} else
 				return Funciones.errorNotFound(0, "Usuario no encontrado");
 		} else

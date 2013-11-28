@@ -86,6 +86,10 @@ Get a tag by ID:
 
 GET /tag/$id_tag
 
+Get all tags:
+
+GET /tags/$page
+
 Update a tag:
 
 PUT /tag

@@ -20,13 +20,13 @@ import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 import views.txt._
 /**/
-object tags extends BaseScalaTemplate[play.api.templates.TxtFormat.Appendable,Format[play.api.templates.TxtFormat.Appendable]](play.api.templates.TxtFormat) with play.api.templates.Template1[List[String],play.api.templates.TxtFormat.Appendable] {
+object tags extends BaseScalaTemplate[play.api.templates.TxtFormat.Appendable,Format[play.api.templates.TxtFormat.Appendable]](play.api.templates.TxtFormat) with play.api.templates.Template1[List[Tag],play.api.templates.TxtFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(tags:List[String]):play.api.templates.TxtFormat.Appendable = {
+    def apply/*1.2*/(tags:List[Tag]):play.api.templates.TxtFormat.Appendable = {
         _display_ {
 
-Seq[Any](format.raw/*1.21*/("""
+Seq[Any](format.raw/*1.18*/("""
 [
 	"""),_display_(Seq[Any](/*3.3*/for(i <- tags.indices) yield /*3.25*/ {_display_(Seq[Any](format.raw/*3.27*/("""
 		"""),_display_(Seq[Any](/*4.4*/_tag(tags(i)))),format.raw/*4.17*/("""
@@ -37,19 +37,19 @@ Seq[Any](format.raw/*1.21*/("""
 ]"""))}
     }
     
-    def render(tags:List[String]): play.api.templates.TxtFormat.Appendable = apply(tags)
+    def render(tags:List[Tag]): play.api.templates.TxtFormat.Appendable = apply(tags)
     
-    def f:((List[String]) => play.api.templates.TxtFormat.Appendable) = (tags) => apply(tags)
+    def f:((List[Tag]) => play.api.templates.TxtFormat.Appendable) = (tags) => apply(tags)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Nov 26 18:56:25 CET 2013
+                    DATE: Thu Nov 28 20:34:28 CET 2013
                     SOURCE: C:/play/workspace/tareas/app/views/tags.scala.txt
-                    HASH: bd6643e9a33694891a06210eafe2208af1287681
-                    MATRIX: 773->1|885->20|926->27|963->49|1002->51|1041->56|1075->69|1114->74|1143->95|1182->97|1223->108|1257->112
+                    HASH: c0963e5e40213f6c87303def8e1f3b9b62476efc
+                    MATRIX: 770->1|879->17|920->24|957->46|996->48|1035->53|1069->66|1108->71|1137->92|1176->94|1217->105|1251->109
                     LINES: 26->1|29->1|31->3|31->3|31->3|32->4|32->4|33->5|33->5|33->5|35->7|36->8
                     -- GENERATED --
                 */

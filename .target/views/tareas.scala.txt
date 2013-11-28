@@ -1,8 +1,8 @@
-@(descripciones:List[String],realizadas:List[Boolean])
+@(tareas:List[Tarea])
 [
-	@for(i <- descripciones.indices) {
-		@_tarea(descripciones(i),realizadas(i))
-		@if(i < descripciones.size - 1) {
+	@for(i <- tareas.indices) {
+		@_tarea(tareas(i))
+		@if(i < tareas.size - 1) {
 			,
 		}
 	}

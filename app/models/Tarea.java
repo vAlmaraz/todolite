@@ -73,13 +73,13 @@ public class Tarea extends Model {
 	 * @param pagina: número de página
 	 * @return: lista de tags en String
 	 */
-	public List<String> getTags(Long id, Long tarea, Integer pagina) {
+	public List<Tag> getTags(Long id, Long tarea, Integer pagina) {
 		List<Tag> tags = finder.where().eq("autor", Usuario.findById(id))
 				.eq("id", tarea).findUnique().tags;
-		List<String> nombres = new ArrayList<String>();
-		for (Tag tag : tags)
-			nombres.add(tag.tag);
-		return nombres;
+		//List<String> nombres = new ArrayList<String>();
+		//for (Tag tag : tags)
+			//nombres.add(tag.tag);
+		return tags;
 	}
 
 	/**

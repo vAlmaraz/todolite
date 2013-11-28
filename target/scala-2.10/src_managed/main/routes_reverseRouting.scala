@@ -1,6 +1,6 @@
 // @SOURCE:C:/play/workspace/tareas/conf/routes
-// @HASH:3da9b12f4596880f16e81bf70fe93690d4da6b48
-// @DATE:Wed Nov 27 19:05:42 CET 2013
+// @HASH:ddf4ae1db5dfad2ad0d1e15a71d5eb2fe8676c12
+// @DATE:Thu Nov 28 20:38:52 CET 2013
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,9 +13,10 @@ import play.libs.F
 import Router.queryString
 
 
-// @LINE:37
+// @LINE:39
+// @LINE:35
 // @LINE:33
-// @LINE:31
+// @LINE:32
 // @LINE:30
 // @LINE:28
 // @LINE:27
@@ -37,11 +38,11 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:37
+// @LINE:39
 class ReverseAssets {
     
 
-// @LINE:37
+// @LINE:39
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -63,9 +64,9 @@ def index(): Call = {
 }
                           
 
+// @LINE:35
 // @LINE:33
-// @LINE:31
-// @LINE:30
+// @LINE:32
 // @LINE:23
 // @LINE:21
 // @LINE:20
@@ -75,7 +76,7 @@ def index(): Call = {
 class ReverseTareas {
     
 
-// @LINE:33
+// @LINE:35
 def tareasByTagName(id:Long, tag:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "usuario/" + implicitly[PathBindable[Long]].unbind("id", id) + "/tag/" + implicitly[PathBindable[String]].unbind("tag", tag))
 }
@@ -99,13 +100,13 @@ def index(id:Long, pagina:Integer): Call = {
 }
                                                 
 
-// @LINE:31
+// @LINE:33
 def getTags(id:Long, tarea:Long, pagina:Integer): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "usuario/" + implicitly[PathBindable[Long]].unbind("id", id) + "/tarea/" + implicitly[PathBindable[Long]].unbind("tarea", tarea) + "/tags/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
 }
                                                 
 
-// @LINE:30
+// @LINE:32
 def addTags(id:Long, tarea:Long): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "usuario/" + implicitly[PathBindable[Long]].unbind("id", id) + "/tarea/" + implicitly[PathBindable[Long]].unbind("tarea", tarea) + "/tags")
 }
@@ -132,12 +133,25 @@ def create(id:Long): Call = {
 }
                           
 
+// @LINE:30
 // @LINE:28
 // @LINE:27
 // @LINE:26
 // @LINE:25
 class ReverseTags {
     
+
+// @LINE:30
+def index(pagina:Integer): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "tags/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
+}
+                                                
+
+// @LINE:28
+def delete(id:Long): Call = {
+   Call("DELETE", _prefix + { _defaultPrefix } + "tag/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                                                
 
 // @LINE:26
 def retrieve(id:Long): Call = {
@@ -154,12 +168,6 @@ def create(): Call = {
 // @LINE:27
 def update(id:Long): Call = {
    Call("PUT", _prefix + { _defaultPrefix } + "tag/" + implicitly[PathBindable[Long]].unbind("id", id))
-}
-                                                
-
-// @LINE:28
-def delete(id:Long): Call = {
-   Call("DELETE", _prefix + { _defaultPrefix } + "tag/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                                                 
     
@@ -224,9 +232,10 @@ def retrieveByName(nombre:String): Call = {
                   
 
 
-// @LINE:37
+// @LINE:39
+// @LINE:35
 // @LINE:33
-// @LINE:31
+// @LINE:32
 // @LINE:30
 // @LINE:28
 // @LINE:27
@@ -248,11 +257,11 @@ def retrieveByName(nombre:String): Call = {
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:37
+// @LINE:39
 class ReverseAssets {
     
 
-// @LINE:37
+// @LINE:39
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -284,9 +293,9 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:35
 // @LINE:33
-// @LINE:31
-// @LINE:30
+// @LINE:32
 // @LINE:23
 // @LINE:21
 // @LINE:20
@@ -296,7 +305,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReverseTareas {
     
 
-// @LINE:33
+// @LINE:35
 def tareasByTagName : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tareas.tareasByTagName",
    """
@@ -340,7 +349,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:31
+// @LINE:33
 def getTags : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tareas.getTags",
    """
@@ -351,7 +360,7 @@ def getTags : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:30
+// @LINE:32
 def addTags : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Tareas.addTags",
    """
@@ -398,12 +407,35 @@ def create : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:30
 // @LINE:28
 // @LINE:27
 // @LINE:26
 // @LINE:25
 class ReverseTags {
     
+
+// @LINE:30
+def index : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Tags.index",
+   """
+      function(pagina) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tags/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("pagina", pagina)})
+      }
+   """
+)
+                        
+
+// @LINE:28
+def delete : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Tags.delete",
+   """
+      function(id) {
+      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "tag/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
 
 // @LINE:26
 def retrieve : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -433,17 +465,6 @@ def update : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function(id) {
       return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "tag/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
-      }
-   """
-)
-                        
-
-// @LINE:28
-def delete : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Tags.delete",
-   """
-      function(id) {
-      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "tag/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -545,9 +566,10 @@ def retrieveByName : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:37
+// @LINE:39
+// @LINE:35
 // @LINE:33
-// @LINE:31
+// @LINE:32
 // @LINE:30
 // @LINE:28
 // @LINE:27
@@ -570,11 +592,11 @@ def retrieveByName : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:37
+// @LINE:39
 class ReverseAssets {
     
 
-// @LINE:37
+// @LINE:39
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -596,9 +618,9 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:35
 // @LINE:33
-// @LINE:31
-// @LINE:30
+// @LINE:32
 // @LINE:23
 // @LINE:21
 // @LINE:20
@@ -608,7 +630,7 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 class ReverseTareas {
     
 
-// @LINE:33
+// @LINE:35
 def tareasByTagName(id:Long, tag:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tareas.tareasByTagName(id, tag), HandlerDef(this, "controllers.Tareas", "tareasByTagName", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """usuario/$id<[0-9]*>/tag/$tag<[a-z,0-9]*>""")
 )
@@ -632,13 +654,13 @@ def index(id:Long, pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mv
 )
                       
 
-// @LINE:31
+// @LINE:33
 def getTags(id:Long, tarea:Long, pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tareas.getTags(id, tarea, pagina), HandlerDef(this, "controllers.Tareas", "getTags", Seq(classOf[Long], classOf[Long], classOf[Integer]), "GET", """""", _prefix + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags/$pagina<[0-9]*>""")
 )
                       
 
-// @LINE:30
+// @LINE:32
 def addTags(id:Long, tarea:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tareas.addTags(id, tarea), HandlerDef(this, "controllers.Tareas", "addTags", Seq(classOf[Long], classOf[Long]), "POST", """""", _prefix + """usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags""")
 )
@@ -665,12 +687,25 @@ def create(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:30
 // @LINE:28
 // @LINE:27
 // @LINE:26
 // @LINE:25
 class ReverseTags {
     
+
+// @LINE:30
+def index(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Tags.index(pagina), HandlerDef(this, "controllers.Tags", "index", Seq(classOf[Integer]), "GET", """""", _prefix + """tags/$pagina<[0-9]*>""")
+)
+                      
+
+// @LINE:28
+def delete(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Tags.delete(id), HandlerDef(this, "controllers.Tags", "delete", Seq(classOf[Long]), "DELETE", """""", _prefix + """tag/$id<[0-9]*>""")
+)
+                      
 
 // @LINE:26
 def retrieve(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
@@ -687,12 +722,6 @@ def create(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:27
 def update(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Tags.update(id), HandlerDef(this, "controllers.Tags", "update", Seq(classOf[Long]), "PUT", """""", _prefix + """tag/$id<[0-9]*>""")
-)
-                      
-
-// @LINE:28
-def delete(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Tags.delete(id), HandlerDef(this, "controllers.Tags", "delete", Seq(classOf[Long]), "DELETE", """""", _prefix + """tag/$id<[0-9]*>""")
 )
                       
     
