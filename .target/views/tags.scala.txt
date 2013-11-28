@@ -1,0 +1,9 @@
+@(tags:List[String])
+[
+	@for(i <- tags.indices) {
+		@_tag(tags(i))
+		@if(i < tags.size - 1) {
+			,
+		}
+	}
+]

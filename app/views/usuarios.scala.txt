@@ -1,0 +1,9 @@
+@(usuarios:List[String])
+[
+	@for(i <- usuarios.indices) {
+		@_usuario(usuarios(i))
+		@if(i < usuarios.size - 1) {
+			,
+		}
+	}
+]

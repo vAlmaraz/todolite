@@ -1,0 +1,9 @@
+@(descripciones:List[String],realizadas:List[Boolean])
+[
+	@for(i <- descripciones.indices) {
+		@_tarea(descripciones(i),realizadas(i))
+		@if(i < descripciones.size - 1) {
+			,
+		}
+	}
+]

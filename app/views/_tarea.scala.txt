@@ -1,0 +1,9 @@
+@(tarea: String,realizada: Boolean)
+{
+	@if(tarea != null) {
+		"descripcion": "@tarea"
+		@if(realizada != null) {
+			,"realizada": @realizada
+		}
+	}
+}

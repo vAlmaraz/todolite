@@ -1,0 +1,7 @@
+@(code: Integer,message: String)
+{
+	@if(message != null) {
+		"message": "@message",
+		"code": @code
+	}
+}

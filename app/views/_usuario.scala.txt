@@ -1,0 +1,6 @@
+@(nombre: String)
+{
+	@if(nombre != null) {
+		"nombre": "@nombre"
+	}
+}

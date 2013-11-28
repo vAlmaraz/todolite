@@ -1,0 +1,6 @@
+@(tag: String)
+{
+	@if(tag != null) {
+		"tag": "@tag"
+	}
+}
