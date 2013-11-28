@@ -1,0 +1,37 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           									controllers.Application.index()
+
+POST	/usuario														controllers.Usuarios.create()
+GET		/usuario/$id<[0-9]*>											controllers.Usuarios.retrieve(id:Long)
+GET		/usuario/$nombre<[a-z,0-9]*>									controllers.Usuarios.retrieveByName(nombre:String)
+GET		/usuario/$nombre<[a-z,0-9]*>/$pagina<[0-9]*>					controllers.Usuarios.retrieveNames(nombre:String,pagina:Integer)
+PUT		/usuario/$id<[0-9]*>											controllers.Usuarios.update(id:Long)
+DELETE	/usuario/$id<[0-9]*>											controllers.Usuarios.delete(id:Long)
+
+GET		/usuarios/$pagina<[0-9]*>										controllers.Usuarios.index(pagina:Integer)
+
+POST	/usuario/$id<[0-9]*>/tarea										controllers.Tareas.create(id:Long)
+GET		/usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>						controllers.Tareas.retrieve(id:Long,tarea:Long)
+PUT		/usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>						controllers.Tareas.update(id:Long,tarea:Long)
+PUT		/usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/realizada				controllers.Tareas.done(id:Long,tarea:Long)
+DELETE	/usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>						controllers.Tareas.delete(id:Long,tarea:Long)
+
+GET		/usuario/$id<[0-9]*>/tareas/$pagina<[0-9]*>						controllers.Tareas.index(id:Long,pagina:Integer)
+
+POST	/tag															controllers.Tags.create()
+GET		/tag/$id<[0-9]*>												controllers.Tags.retrieve(id:Long)
+PUT		/tag/$id<[0-9]*>												controllers.Tags.update(id:Long)
+DELETE	/tag/$id<[0-9]*>												controllers.Tags.delete(id:Long)
+
+POST	/usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags					controllers.Tareas.addTags(id:Long,tarea:Long)
+GET		/usuario/$id<[0-9]*>/tarea/$tarea<[0-9]*>/tags/$pagina<[0-9]*>	controllers.Tareas.getTags(id:Long,tarea:Long,pagina:Integer)
+
+GET		/usuario/$id<[0-9]*>/tag/$tag<[a-z,0-9]*>						controllers.Tareas.tareasByTagName(id:Long,tag:String)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

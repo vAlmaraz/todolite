@@ -1,0 +1,770 @@
+2013-11-27 18:32:50,905 - [INFO] - from play in pool-4-thread-3 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2013-11-27 18:33:06,954 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 18:33:08,486 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 18:40:59,159 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 18:40:59,362 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 18:42:21,597 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 18:42:21,753 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 18:43:17,519 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 18:43:17,675 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 18:43:57,862 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 18:43:58,066 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 18:44:04,425 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.NullPointerException
+
+2013-11-27 18:44:04,534 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd789848 - Internal server error, for (GET) [/usuario/1/buscartag/asdf/] ->
+
+play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.NullPointerException: null
+	at models.Tag.findTareas(Tag.java:65) ~[na:na]
+	at controllers.Tags.tareasByTagName(Tags.java:36) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2013-11-27 18:45:53,582 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 18:45:53,753 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 18:47:23,629 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 18:47:23,801 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 18:49:12,411 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.NullPointerException
+
+2013-11-27 18:49:12,426 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd790lhd - Internal server error, for (GET) [/usuario/1/tag/etiqueta] ->
+
+play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.NullPointerException: null
+	at models.Tag.findTareas(Tag.java:65) ~[na:na]
+	at controllers.Tags.tareasByTagName(Tags.java:36) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2013-11-27 18:51:33,989 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 18:51:34,145 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 18:51:34,145 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.NullPointerException
+
+2013-11-27 18:51:34,161 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd798n8m - Internal server error, for (GET) [/usuario/1/tag/etiqueta] ->
+
+play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.NullPointerException: null
+	at models.Tag.findTareas(Tag.java:65) ~[na:na]
+	at controllers.Tags.tareasByTagName(Tags.java:36) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2013-11-27 18:54:21,913 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 18:54:22,100 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 18:54:22,131 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.NullPointerException
+
+2013-11-27 18:54:22,147 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd79iblm - Internal server error, for (GET) [/usuario/1/tag/etiqueta] ->
+
+play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.NullPointerException: null
+	at models.Tag.findTareas(Tag.java:65) ~[na:na]
+	at controllers.Tags.tareasByTagName(Tags.java:36) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2013-11-27 19:00:17,233 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 19:00:17,374 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 19:00:17,452 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.RuntimeException: Error getting BeanDescriptor for path tareas from models.Tarea
+
+2013-11-27 19:00:17,468 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd7achbb - Internal server error, for (GET) [/usuario/1/tag/etiqueta] ->
+
+play.api.Application$$anon$1: Execution exception[[RuntimeException: Error getting BeanDescriptor for path tareas from models.Tarea]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.RuntimeException: Error getting BeanDescriptor for path tareas from models.Tarea
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.getBeanDescriptor(BeanDescriptor.java:1409) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.OrmQueryDetail.setDefaultSelectClause(OrmQueryDetail.java:411) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.setDefaultSelectClause(DefaultOrmQuery.java:837) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.createQueryRequest(DefaultServer.java:1069) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.createQueryRequest(DefaultServer.java:1057) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1451) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.util.FilterExpressionList.findList(FilterExpressionList.java:61) ~[avaje-ebeanorm.jar:na]
+	at models.Tarea.findByTagName(Tarea.java:108) ~[na:na]
+	at controllers.Tareas.tareasByTagName(Tareas.java:47) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2013-11-27 19:02:07,968 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 19:02:08,105 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 19:02:08,120 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.RuntimeException: Error getting BeanDescriptor for path tareas from models.Tarea
+
+2013-11-27 19:02:08,126 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd7aip41 - Internal server error, for (GET) [/usuario/1/tag/etiqueta] ->
+
+play.api.Application$$anon$1: Execution exception[[RuntimeException: Error getting BeanDescriptor for path tareas from models.Tarea]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.RuntimeException: Error getting BeanDescriptor for path tareas from models.Tarea
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.getBeanDescriptor(BeanDescriptor.java:1409) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.OrmQueryDetail.setDefaultSelectClause(OrmQueryDetail.java:411) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.setDefaultSelectClause(DefaultOrmQuery.java:837) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.createQueryRequest(DefaultServer.java:1069) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.createQueryRequest(DefaultServer.java:1057) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1451) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.util.FilterExpressionList.findList(FilterExpressionList.java:61) ~[avaje-ebeanorm.jar:na]
+	at models.Tarea.findByTagName(Tarea.java:108) ~[na:na]
+	at controllers.Tareas.tareasByTagName(Tareas.java:47) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2013-11-27 19:02:22,124 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 19:02:22,269 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 19:02:22,283 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.RuntimeException: Error getting BeanDescriptor for path tareas from models.Tarea
+
+2013-11-27 19:02:22,290 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd7ajk2k - Internal server error, for (GET) [/usuario/1/tag/etiqueta] ->
+
+play.api.Application$$anon$1: Execution exception[[RuntimeException: Error getting BeanDescriptor for path tareas from models.Tarea]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: java.lang.RuntimeException: Error getting BeanDescriptor for path tareas from models.Tarea
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.getBeanDescriptor(BeanDescriptor.java:1409) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.OrmQueryDetail.setDefaultSelectClause(OrmQueryDetail.java:411) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.setDefaultSelectClause(DefaultOrmQuery.java:837) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.createQueryRequest(DefaultServer.java:1069) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.createQueryRequest(DefaultServer.java:1057) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1451) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.util.FilterExpressionList.findList(FilterExpressionList.java:61) ~[avaje-ebeanorm.jar:na]
+	at models.Tarea.findByTagName(Tarea.java:108) ~[na:na]
+	at controllers.Tareas.tareasByTagName(Tareas.java:47) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2013-11-27 19:02:39,120 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 19:02:39,269 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 19:02:39,299 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: Not valid on scalar bean property models.Tag.tag
+
+2013-11-27 19:02:39,307 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd7akj78 - Internal server error, for (GET) [/usuario/1/tag/etiqueta] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: Not valid on scalar bean property models.Tag.tag]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: javax.persistence.PersistenceException: Not valid on scalar bean property models.Tag.tag
+	at com.avaje.ebeaninternal.server.deploy.BeanProperty.buildElPropertyValue(BeanProperty.java:452) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.buildElGetValue(BeanDescriptor.java:1709) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanPropertyAssoc.createElPropertyValue(BeanPropertyAssoc.java:126) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanPropertyAssocMany.buildElPropertyValue(BeanPropertyAssocMany.java:168) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.buildElGetValue(BeanDescriptor.java:1709) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.getElPropertyValue(BeanDescriptor.java:1677) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.getElGetValue(BeanDescriptor.java:1656) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.expression.AbstractExpression.getElProp(AbstractExpression.java:55) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.expression.SimpleExpression.addBindValues(SimpleExpression.java:47) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.util.DefaultExpressionList.buildBindValues(DefaultExpressionList.java:277) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryPredicates.prepare(CQueryPredicates.java:290) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryPredicates.prepare(CQueryPredicates.java:260) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryBuilder.buildQuery(CQueryBuilder.java:200) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:158) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultBeanLoader.loadMany(DefaultBeanLoader.java:140) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.loadMany(DefaultServer.java:499) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.loadcontext.DLoadManyContext.loadSecondaryQuery(DLoadManyContext.java:153) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.loadcontext.DLoadContext.executeSecondaryQueries(DLoadContext.java:124) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.executeSecondaryQueries(OrmQueryRequest.java:86) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:197) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.util.FilterExpressionList.findList(FilterExpressionList.java:61) ~[avaje-ebeanorm.jar:na]
+	at models.Tarea.findByTagName(Tarea.java:108) ~[na:na]
+	at controllers.Tareas.tareasByTagName(Tareas.java:47) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2013-11-27 19:03:02,585 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 19:03:02,800 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 19:03:02,892 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: Query threw SQLException:Columna "TAG.TAG" no encontrada
+Column "TAG.TAG" not found; SQL statement:
+select t0.id c0, t0.descripcion c1, t0.realizada c2, t0.autor_id c3 from tarea t0 where t0.autor_id = ?  and tag.tag = ?  [42122-172] 
+Bind values:[null] 
+Query was:
+select t0.id c0, t0.descripcion c1, t0.realizada c2, t0.autor_id c3 from tarea t0 where t0.autor_id = ?  and tag.tag = ?  
+
+
+
+2013-11-27 19:03:02,910 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd7am252 - Internal server error, for (GET) [/usuario/1/tag/etiqueta] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: Query threw SQLException:Columna "TAG.TAG" no encontrada
+Column "TAG.TAG" not found; SQL statement:
+select t0.id c0, t0.descripcion c1, t0.realizada c2, t0.autor_id c3 from tarea t0 where t0.autor_id = ?  and tag.tag = ?  [42122-172] 
+Bind values:[null] 
+Query was:
+select t0.id c0, t0.descripcion c1, t0.realizada c2, t0.autor_id c3 from tarea t0 where t0.autor_id = ?  and tag.tag = ?  
+
+]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: javax.persistence.PersistenceException: Query threw SQLException:Columna "TAG.TAG" no encontrada
+Column "TAG.TAG" not found; SQL statement:
+select t0.id c0, t0.descripcion c1, t0.realizada c2, t0.autor_id c3 from tarea t0 where t0.autor_id = ?  and tag.tag = ?  [42122-172] 
+Bind values:[null] 
+Query was:
+select t0.id c0, t0.descripcion c1, t0.realizada c2, t0.autor_id c3 from tarea t0 where t0.autor_id = ?  and tag.tag = ?  
+
+
+	at com.avaje.ebeaninternal.server.query.CQuery.createPersistenceException(CQuery.java:790) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQuery.createPersistenceException(CQuery.java:767) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:202) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.util.DefaultExpressionList.findList(DefaultExpressionList.java:177) ~[avaje-ebeanorm.jar:na]
+	at models.Tarea.findByTagName(Tarea.java:108) ~[na:na]
+	at controllers.Tareas.tareasByTagName(Tareas.java:47) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLException: Columna "TAG.TAG" no encontrada
+Column "TAG.TAG" not found; SQL statement:
+select t0.id c0, t0.descripcion c1, t0.realizada c2, t0.autor_id c3 from tarea t0 where t0.autor_id = ?  and tag.tag = ?  [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329) ~[h2.jar:1.3.172]
+	at org.h2.message.DbException.get(DbException.java:169) ~[h2.jar:1.3.172]
+	at org.h2.message.DbException.get(DbException.java:146) ~[h2.jar:1.3.172]
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144) ~[h2.jar:1.3.172]
+	at org.h2.expression.Comparison.optimize(Comparison.java:161) ~[h2.jar:1.3.172]
+	at org.h2.expression.ConditionAndOr.optimize(ConditionAndOr.java:132) ~[h2.jar:1.3.172]
+	at org.h2.command.dml.Select.prepare(Select.java:811) ~[h2.jar:1.3.172]
+	at org.h2.command.Parser.prepareCommand(Parser.java:219) ~[h2.jar:1.3.172]
+	at org.h2.engine.Session.prepareLocal(Session.java:425) ~[h2.jar:1.3.172]
+	at org.h2.engine.Session.prepareCommand(Session.java:374) ~[h2.jar:1.3.172]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138) ~[h2.jar:1.3.172]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:70) ~[h2.jar:1.3.172]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:267) ~[h2.jar:1.3.172]
+	at com.jolbox.bonecp.ConnectionHandle.prepareStatement(ConnectionHandle.java:1024) ~[bonecp.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQuery.prepareBindExecuteQuery(CQuery.java:360) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:162) ~[avaje-ebeanorm.jar:na]
+	... 26 common frames omitted
+
+2013-11-27 19:04:04,119 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 19:04:04,256 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 19:04:04,276 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: Not valid on scalar bean property models.Tag.tag
+
+2013-11-27 19:04:04,283 - [ERROR] - from application in play-internal-execution-context-1 
+
+
+! @6gd7apepg - Internal server error, for (GET) [/usuario/1/tag/etiqueta] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: Not valid on scalar bean property models.Tag.tag]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.1]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:261) [play_2.10.jar:2.2.1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$2.applyOrElse(PlayDefaultUpstreamHandler.scala:257) [play_2.10.jar:2.2.1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:411) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:408) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:37) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:133) [scala-library.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:58) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:254) [scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:249) [scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: javax.persistence.PersistenceException: Not valid on scalar bean property models.Tag.tag
+	at com.avaje.ebeaninternal.server.deploy.BeanProperty.buildElPropertyValue(BeanProperty.java:452) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.buildElGetValue(BeanDescriptor.java:1709) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanPropertyAssoc.createElPropertyValue(BeanPropertyAssoc.java:126) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanPropertyAssocMany.buildElPropertyValue(BeanPropertyAssocMany.java:168) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.buildElGetValue(BeanDescriptor.java:1709) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.getElPropertyValue(BeanDescriptor.java:1677) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanDescriptor.getElGetValue(BeanDescriptor.java:1656) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.expression.AbstractExpression.getElProp(AbstractExpression.java:55) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.expression.SimpleExpression.addBindValues(SimpleExpression.java:47) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.util.DefaultExpressionList.buildBindValues(DefaultExpressionList.java:277) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryPredicates.prepare(CQueryPredicates.java:290) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryPredicates.prepare(CQueryPredicates.java:260) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryBuilder.buildQuery(CQueryBuilder.java:200) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:158) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultBeanLoader.loadMany(DefaultBeanLoader.java:140) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.loadMany(DefaultServer.java:499) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.loadcontext.DLoadManyContext.loadSecondaryQuery(DLoadManyContext.java:153) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.loadcontext.DLoadContext.executeSecondaryQueries(DLoadContext.java:124) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.executeSecondaryQueries(OrmQueryRequest.java:86) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:197) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:77) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:265) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1460) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:885) ~[avaje-ebeanorm.jar:na]
+	at com.avaje.ebeaninternal.util.FilterExpressionList.findList(FilterExpressionList.java:61) ~[avaje-ebeanorm.jar:na]
+	at models.Tarea.findByTagName(Tarea.java:108) ~[na:na]
+	at controllers.Tareas.tareasByTagName(Tareas.java:47) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[play_2.10.jar:2.2.1]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[play_2.10.jar:2.2.1]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:278) ~[scala-library.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:274) ~[scala-library.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:29) [scala-library.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[play_2.10.jar:2.2.1]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
+	... 4 common frames omitted
+
+2013-11-27 19:04:45,602 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 19:04:45,759 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 19:05:54,231 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 19:05:54,367 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2013-11-27 19:08:05,307 - [INFO] - from play in play-internal-execution-context-7 
+database [default] connected at jdbc:h2:mem:play
+
+2013-11-27 19:08:05,442 - [INFO] - from play in play-internal-execution-context-7 
+Application started (Dev)
+
