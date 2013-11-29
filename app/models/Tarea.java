@@ -25,7 +25,7 @@ import functions.Funciones;
 @Entity
 public class Tarea extends Model {
 
-	@Id
+	@Id @GeneratedValue(strategy=GenerationType.AUTO) 
 	public Long id;
 	@Required
 	public String descripcion;

@@ -22,7 +22,7 @@ import functions.Funciones;
 @Entity
 public class Usuario extends Model {
 
-	@Id
+	@Id @GeneratedValue(strategy=GenerationType.AUTO) 
 	public Long id;
 	@Required
 	public String nombre;

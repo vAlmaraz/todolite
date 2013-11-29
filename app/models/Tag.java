@@ -22,7 +22,7 @@ import functions.Funciones;
 @Entity
 public class Tag extends Model {
 
-	@Id
+	@Id @GeneratedValue(strategy=GenerationType.AUTO) 
 	public Long id;
 	@Required
 	public String tag;
