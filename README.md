@@ -15,7 +15,7 @@ Requirements
 Server with Play! framework and a Postgresql database.
 Rest client using the following headers:
 > Accept: application/json
-> Content-Type: application/json
+Content-Type: application/json
 
 
 ### USER MANAGEMENT
